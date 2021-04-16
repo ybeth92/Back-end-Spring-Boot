@@ -7,42 +7,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 public class Tarea {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
+    @Setter
     private Integer id;
 
     @NotNull
     @Column(nullable = false, length = 300)
+    @Getter
+    @Setter
     private String tarea;
 
     @NotNull
+    @Getter
+    @Setter
     private int estado;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTarea() {
-        return tarea;
-    }
-
-    public void setTarea(String tarea) {
-        this.tarea = tarea;
-    }
-
-    public int getEstado() {
-        return estado;
-    }
-
-    public void setEstado(int estado) {
-        this.estado = estado;
-    }
 }
