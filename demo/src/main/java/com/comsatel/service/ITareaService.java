@@ -8,6 +8,7 @@ public interface ITareaService {
     Tarea registrar(Tarea a);
     Tarea modificar(Tarea a);
     List<Tarea> listar();
+    Tarea listarPorId(Integer id);
     void eliminar(Integer id);
 
 }

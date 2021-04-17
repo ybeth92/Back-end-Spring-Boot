@@ -22,6 +22,12 @@ public class TareaController {
         return new ResponseEntity<List<Tarea>>(lista, HttpStatus.OK);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Tarea> listarPorId(@PathVariable("id") Integer id) {
+        Tarea obj = service.listarPorId(id);
+        return new ResponseEntity<Tarea>(obj, HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<Tarea> registrar(@RequestBody Tarea t) throws Exception {
         Tarea obj = service.registrar(t);
