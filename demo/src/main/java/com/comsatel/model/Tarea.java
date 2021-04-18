@@ -28,6 +28,6 @@ public class Tarea {
     @NotNull
     @Getter
     @Setter
-    private int estado;
+    private String estado;
 
 }
